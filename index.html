@@ -183,17 +183,8 @@
             box-shadow: 0 10px 30px rgba(0, 212, 255, 0.2);
         }
 
-        .video-thumbnail {
-            height: 160px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 3rem;
-            color: #00d4ff;
-        }
-
         .video-info {
-            padding: 1.5rem;
+            padding: 1rem;
         }
 
         .subscribe-button {
@@ -297,9 +288,15 @@
 
         <div class="videos-grid">
             <div class="video-card">
-                <div class="video-thumbnail">▶</div>
+                <iframe width="100%" height="160"
+                        src="https://www.youtube.com/embed/8JQ9zDW2jjk"
+                        title="YouTube video player"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen>
+                </iframe>
                 <div class="video-info">
-                    <h3>Video Coming Soon</h3>
+                    <h3>8JQ9zDW2jjk</h3>
                 </div>
             </div>
         </div>
@@ -316,13 +313,11 @@
         document.querySelectorAll('section').forEach(section => {
             section.classList.remove('active');
         });
-
         document.getElementById(pageId).classList.add('active');
 
         document.querySelectorAll('.nav-btn').forEach(btn => {
             btn.classList.remove('active');
         });
-
         const activeButton = document.querySelector(
             `.nav-btn[onclick="showPage('${pageId}')"]`
         );
